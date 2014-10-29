@@ -11,7 +11,7 @@ execute "sudo tar xjf /usr/local/share/phantomjs-1.9.8-linux-x86_64.tar.bz2" do
 end
 
 Chef::Log.info("Installing phantomjs dependencies")
-execute "sudo yum install fontconfig freetype libfreetype.so.6 libfontconfig.so.1 libstdc++.so.6" do
+execute "sudo yum -y install fontconfig freetype libfreetype.so.6 libfontconfig.so.1 libstdc++.so.6" do
   cwd "/usr/local/share/phantomjs-1.9.8-linux-x86_64.tar.bz2"
 end
 execute "sudo ln -s /usr/local/share/phantomjs-1.9.8-linux-x86_64/bin/phantomjs /usr/local/share/phantomjs"
